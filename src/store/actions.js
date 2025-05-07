@@ -20,5 +20,5 @@ export function searchMealsByIngredient({ commit }, ingredient) {
     api.get(`filter.php?i=${ingredient}`)
         .then(({ data }) => {
             commit('setMealsByIngredient', data.meals)
-        })
+    })
 }
